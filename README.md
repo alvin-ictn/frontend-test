@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# Anime Search App 🎌
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-blue?logo=vite)](https://vitejs.dev/)
+[![MUI](https://img.shields.io/badge/MUI-7-blue?logo=mui)](https://mui.com/)
+[![Axios](https://img.shields.io/badge/Axios-1.9-yellow)](https://axios-http.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](#)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A **responsive Anime Search App** built with React 19, MUI 7, and the [Jikan API](https://docs.api.jikan.moe/).
 
-## Expanding the ESLint configuration
+**Features:**
+- 🔍 Instant search with debounce (250ms)
+- 📄 Anime detail pages with full information
+- 🔢 Pagination with flexible controls (Prev/Next, jump pages, per-page)
+- 🎨 Responsive UI (desktop & mobile friendly)
+- ⚡ Race condition handling & abortable requests
+- ✨ Loading animations & graceful error states
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔗 Live Demo
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+[Vercel Demo](https://frontend-test-lac-delta.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠 Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| Tech | Version |
+|------|---------|
+| React | 19 |
+| TypeScript | 5.7 |
+| React Router DOM | 7.5.3 |
+| Material UI (MUI) | 7.0.2 |
+| Axios | 1.9 |
+| lodash.debounce | 4.0.8 |
+| Vite | 6.3.1 |
+| ESLint | 9.22 |
